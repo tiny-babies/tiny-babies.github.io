@@ -19,17 +19,22 @@ ChartJS.register(
     Tooltip,
     Legend
 );
-if (window.matchMedia('(max-device-width: 960px)').matches){
-    defaults.font.size = '15'
+// defaults.font.size = '10';
+
+defaults.font.size = '20'
+
+if (window.matchMedia('(max-device-width: 500px)').matches) {
+    defaults.font.size = '10'
 }
 
 const options = {
+    responsive: true,
     scales: {
         yAxes: {
             ticks: {
                 beginAtZero: true,
                 color: 'white',
-                fontSize: 90,
+                // fontSize: 90,
             }
         },
         xAxes: {

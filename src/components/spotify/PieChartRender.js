@@ -6,7 +6,11 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 defaults.color = "white";
 defaults.font.size = 20;
+if (window.matchMedia('(max-device-width: 500px)').matches) {
+    defaults.font.size = '10'
+}
 const options = {
+    responsive: true,
     
     elements: {
 

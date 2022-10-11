@@ -133,6 +133,7 @@ const Home = () => {
 
 
                     <h1 className="home-h1">WEB-APP FEATURES:</h1>
+                    <h2 className="home-h2">Note: This current app does not have a backend as to optimize speed, and Github cannot host server-side apps.  The Full Stack implementation is here: <a href="https://github.com/tiny-babies/nick-website.git" target="_blank" rel="noopener noreferrer">https://github.com/tiny-babies/nick-website.git</a></h2>
                     <div className="website-info">
                         <div className="website-info-box">
                             <div id="react-title-holder">
