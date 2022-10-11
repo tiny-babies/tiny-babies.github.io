@@ -125,7 +125,7 @@ const Home = () => {
                     </h3>
 
                     <div id="resume-transcript-wrapper">
-                        <a href="https://drive.google.com/file/d/1KQCOTKKEqtnl5Bam4fOfhjtFFtfZlYPd/view?usp=sharing" target="_blank" className="resume-btn" rel="noopener noreferrer">RESUME</a>
+                        <a href="https://drive.google.com/file/d/1BmJaYPMp1ZkwXk0Hj13kGqrpA1bOxX2m/view?usp=sharing" target="_blank" className="resume-btn" rel="noopener noreferrer">RESUME</a>
                         <a href="https://drive.google.com/file/d/1tzby_180c9RCnKy7f8fYw91SmHvqX_an/view?usp=sharing" target="_blank" className="resume-btn" rel="noopener noreferrer">TRANSCRIPT</a>
                     </div>
 
