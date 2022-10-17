@@ -7,6 +7,7 @@ import BarChart from './BarChart';
 import TopCategories from './TopCategories';
 import PieChart from "./PieChart";
 import {getRequest} from "../../Api";
+import spotifyLogo from "../../styles/Spotify_Logo_RGB_Green.png"
 
 
 
@@ -147,11 +148,13 @@ class Metrics extends React.Component{
 
     }
 
+
+
     render(){
         let results;
         results = this.state.topArtists.map((artist, index) => (
             
-            <div className="artist-card" key={artist.id}>
+            <div className="artist-card" key={artist.id} onClick={() => window.open(artist.external_urls['spotify'])}>
                 <h1 className="home-h1">{index + 1}</h1>
                 <span className="artist-img" style={{
                     backgroundImage: "url(" + artist.images[0].url + ")"
@@ -168,7 +171,7 @@ class Metrics extends React.Component{
                 <div className="app-body-container">
                     <div className="App-body">
                     
-                    
+                        <h2 className="home-h2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>UTune: A <img src={spotifyLogo} alt="img" style={{ width: "12%", marginInline: "8px", }}></img> Analysis App</h2>
                         <Button
                             className="submit-button"
                             variant="danger"

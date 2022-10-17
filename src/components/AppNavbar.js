@@ -30,9 +30,9 @@ const AppNavbar = () => {
                     </ul>
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <a className="nav-link app-nav-item" id="app-nav-spotify" href="/spotify">
+                            <a className="nav-link app-nav-item" id="app-nav-spotify" href="/utune">
 
-                                Spotify Analysis App </a>
+                                UTune Analysis App </a>
                         </li>
                     </ul>
 

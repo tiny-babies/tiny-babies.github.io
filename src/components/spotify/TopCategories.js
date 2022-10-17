@@ -132,7 +132,7 @@ class TopCategories extends React.Component{
         let results;
         results = this.state.songList.map((song, index) => (
 
-            <div className="artist-card" key={song.id}>
+            <div className="artist-card" key={song.id} onClick={() => window.open(song.external_urls['spotify'])}>
                 <h1 className="home-h1">{index + 1}</h1>
                 <span className="artist-img" style={{
                     backgroundImage: "url(" + song.album.images[0].url + ")"

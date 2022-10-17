@@ -5,6 +5,7 @@ import AppNavbar from '../components/AppNavbar';
 import pieChartPic from '../styles/PieChartEx.png';
 import barChartPic from '../styles/BaChartEx.png';
 import courseListPic from '../styles/courseListEx.png'
+import spotifyLogo from '../styles/Spotify_Logo_RGB_Green.png'
 import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 
 
@@ -53,7 +54,9 @@ const Home = () => {
                         <b>WEB DEVELOPMENT:</b>
                         <br />
                         <br />
-                        <a className="resume-link" href="/spotify">Spotify Analysis App </a>
+                        <a className="resume-link" href="/utune">UTune: Spotify Analysis App</a> 
+                        <br/>
+                        Following <img src={spotifyLogo} alt="img" style={{ width: "12%", marginInline: "8px", }}></img> Guidelines...
                         <br></br>
                         This app allows a user to log into their Spotify account to see statistics about the songs that they listen to. I developed a Spring-Boot back-end that uses RESTful endpoints with the Spotify Web API.  I also developed the React front-end that consumes REST API from the Spring-Boot endpoints using Axios.  I created React components that compute additional insight into the Spotify song statistics, and I designed React pages and components to display the Spotify information with the help of Bootstrap and Chart.js. 
                         </h3>

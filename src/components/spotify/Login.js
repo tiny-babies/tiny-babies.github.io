@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import spotifyLogo from "../../styles/Spotify_Logo_RGB_Green.png"
 
 
 function Login(props){
@@ -10,6 +11,7 @@ function Login(props){
     return(
         <div className="app-body-container" style={{height: '100vh'}}>
             <div className="App-body">
+                <h2 className="home-h2" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>UTune: A <img src={spotifyLogo} alt="img" style={{ width: "12%", marginInline: "8px", }}></img> Analysis App</h2>
                 <h1 className="home-h1" style={{marginBottom: '10vh'}}>LOGIN TO YOUR SPOTIFY ACCOUNT</h1>
                 <h3 className="home-h3">The current app is under review by Spotify for public use, and it will not work unless I explicitly add your Spotify Email to my Spotify Dashboard.</h3>
                  <Button

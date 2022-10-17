@@ -1,10 +1,5 @@
 
 
-.artist-card > .home-h1{
-    display: inline-block;
-    margin: 0.5em;
-    width: 5vw;
-}
 
 .artist-card{
     width: 100%;
@@ -12,6 +7,9 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    transition-property: box-shadow;
+        transition-duration: .7s;
+        transition-delay: 0s;
 }
 
 .artist-card>.home-h1 {
@@ -20,14 +18,21 @@
     width: 5vw;
 }
 
+.artist-card:hover{
+    box-shadow: 0 0 30px #25d366,
+            0 0 50px #48ee85, 0 0 70px #0ec0a5;
+    cursor: pointer;
+    
+}
+
 .artist-img{
     margin: 10px;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: inline-block;
     background-size: cover;
     background-position: center;
-    border-radius: 25%;
+    /* border-radius: 25%; */
 }
 .artist-info{
     display: inline-block;
