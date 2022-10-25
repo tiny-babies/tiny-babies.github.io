@@ -25,7 +25,7 @@ class Metrics extends React.Component{
             artistList: [],
             rSelected: "short_term",
         };
-        // this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
+
     }
 
     async getUserRecentlyPlayed(){
@@ -36,7 +36,7 @@ class Metrics extends React.Component{
 
     async getUserProfile(){
         const response = await getRequest(this.props.token, "v1/me");
-        // console.log(response);
+
         return response;
     }
 
@@ -153,15 +153,17 @@ class Metrics extends React.Component{
     render(){
         let results;
         results = this.state.topArtists.map((artist, index) => (
-            
-            <div className="artist-card" key={artist.id} onClick={() => window.open(artist.external_urls['spotify'])}>
-                <h1 className="home-h1">{index + 1}</h1>
-                <span className="artist-img" style={{
-                    backgroundImage: "url(" + artist.images[0].url + ")"
+            <div className="artist-list" key={artist.id}>
+                <div className="artist-card" key={artist.id} onClick={() => window.open(artist.external_urls['spotify'])}>
+                    <h1 className="home-h1">{index + 1}</h1>
+                    <span className="artist-img" style={{
+                        backgroundImage: "url(" + artist.images[0].url + ")"
                     }}></span>
-                <span className="home-h2 artist-info">
-                    {artist.name}
-                </span>
+                    <span className="artist-info">
+                        {artist.name}
+                    </span>
+                </div>
+
             </div>
 
         ))
@@ -208,7 +210,7 @@ class Metrics extends React.Component{
                             <Button variant="outline-warning" onClick={() => this.onRadioBtnClick("medium_term")} active={this.state.rSelected === "medium_term"}>Six Months</Button>
                             <Button variant="outline-warning" onClick={() => this.onRadioBtnClick("long_term")} active={this.state.rSelected === "long_term"}>All Time</Button>
                         </ButtonGroup>
-                        <div id="artist-list">
+                        <div >
                             {results.length ? (
                                 results
                             ) : (

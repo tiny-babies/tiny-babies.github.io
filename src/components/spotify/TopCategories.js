@@ -131,17 +131,19 @@ class TopCategories extends React.Component{
 
         let results;
         results = this.state.songList.map((song, index) => (
-
-            <div className="artist-card" key={song.id} onClick={() => window.open(song.external_urls['spotify'])}>
-                <h1 className="home-h1">{index + 1}</h1>
-                <span className="artist-img" style={{
-                    backgroundImage: "url(" + song.album.images[0].url + ")"
-                }}></span>
-                <span className="artist-info">
-                    <div className="song-name">{song.name}</div>
-                    <div className="song-artist">{song.artists[0].name}</div>
-                </span>
+            <div className="artist-list" key={song.id}>
+                <div className="artist-card" key={song.id} onClick={() => window.open(song.external_urls['spotify'])}>
+                    <h1 className="home-h1">{index + 1}</h1>
+                    <span className="artist-img" style={{
+                        backgroundImage: "url(" + song.album.images[0].url + ")"
+                    }}></span>
+                    <span className="artist-info">
+                        <div className="song-name">{song.name}</div>
+                        <div className="song-artist">{song.artists[0].name}</div>
+                    </span>
+                </div>
             </div>
+            
         ))
 
 
@@ -165,8 +167,7 @@ class TopCategories extends React.Component{
                 </select>
 
                 <div 
-                key={this.state.category}
-                id="artist-list">
+                key={this.state.category}>
                     {results.length ? (
                         results
                     ) : (

@@ -9,7 +9,6 @@ export const clientSecret = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
 export const redirectUri = process.env.REACT_APP_SPOTIFY_REDIRECT;
 
 export const scopes = [
-    "user-read-private",
     "user-read-email",
     "user-top-read",
     "user-read-recently-played",

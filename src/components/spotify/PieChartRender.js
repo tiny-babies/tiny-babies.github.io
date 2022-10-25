@@ -11,6 +11,7 @@ if (window.matchMedia('(max-device-width: 500px)').matches) {
 }
 const options = {
     responsive: true,
+    maintainAspectRatio: true,
     
     elements: {
 
@@ -25,5 +26,9 @@ const options = {
 
 
 export function PieChartRender(props) {
-    return <Pie data={props.data} options={options} />;
+    if(window.matchMedia('(min-device-width: 500px)').matches){
+        return <div style={{ margin: "0 auto", height: "auto", width: "40vw" }}><Pie data={props.data} options={options} /></div>
+    }
+    else
+        return <Pie data={props.data} options={options} />
 }
