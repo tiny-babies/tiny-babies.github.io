@@ -26,8 +26,11 @@ const options = {
 
 
 export function PieChartRender(props) {
-    if(window.matchMedia('(min-device-width: 500px)').matches){
+    if(window.matchMedia('(min-device-width: 1350px)').matches){
         return <div style={{ margin: "0 auto", height: "auto", width: "40vw" }}><Pie data={props.data} options={options} /></div>
+    }
+    else if (window.matchMedia('(min-device-width: 800px)').matches){
+        return <div style={{ margin: "0 auto", height: "auto", width: "60vw" }}><Pie data={props.data} options={options} /></div>
     }
     else
         return <Pie data={props.data} options={options} />
