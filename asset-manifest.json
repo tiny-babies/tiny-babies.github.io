@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.71d07683.css",
+    "main.css": "/static/css/main.0d776f76.css",
     "main.js": "/static/js/main.2222d5c4.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/starPhoto.jpg": "/static/media/starPhoto.a7abdbc241892bff0227.jpg",
     "static/media/courseListEx.png": "/static/media/courseListEx.a26ef3c1d04ec43980b6.png",
     "static/media/PieChartEx.png": "/static/media/PieChartEx.882f1a77c91d8bc72c77.png",
     "static/media/BaChartEx.png": "/static/media/BaChartEx.539b20ac27f360d2ea8a.png",
     "static/media/Spotify_Logo_RGB_Green.png": "/static/media/Spotify_Logo_RGB_Green.0c4ae91bae23217d39c9.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.71d07683.css.map": "/static/css/main.71d07683.css.map",
+    "main.0d776f76.css.map": "/static/css/main.0d776f76.css.map",
     "main.2222d5c4.js.map": "/static/js/main.2222d5c4.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.71d07683.css",
+    "static/css/main.0d776f76.css",
     "static/js/main.2222d5c4.js"
   ]
 }
