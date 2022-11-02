@@ -196,7 +196,7 @@ h2.app-head-text{
 
 
 #resume-transcript-wrapper{
-  margin-top: 50px;
+  margin-top: 90px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }

@@ -6,6 +6,7 @@ import pieChartPic from '../styles/PieChartEx.png';
 import barChartPic from '../styles/BaChartEx.png';
 import courseListPic from '../styles/courseListEx.png'
 import spotifyLogo from '../styles/Spotify_Logo_RGB_Green.png'
+import Researchimg from '../styles/Researchimg.png'
 import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 
 
@@ -40,6 +41,10 @@ const Home = () => {
                             <h2>I am a University of California, Santa Barbara undergraduate for the class of 2023, and I am studying Computer Science with a 3.92 GPA.  My goal is to become a Software Developer and a Full-Stack Engineer.  </h2>
                         </div>
                     </div>
+                    <div id="resume-transcript-wrapper">
+                        <a href="https://docs.google.com/document/d/1cUicBOngbToI9g36Gz7WWIG-DDgBw7YzMI2D8H38MVE/edit?usp=sharing" target="_blank" className="resume-btn" rel="noopener noreferrer">RESUME PDF</a>
+                        <a href="https://drive.google.com/file/d/1tzby_180c9RCnKy7f8fYw91SmHvqX_an/view?usp=sharing" target="_blank" className="resume-btn" rel="noopener noreferrer">TRANSCRIPT PDF</a>
+                    </div>
 
 
                     <h1 className="home-h1" id="home-resume">RESUME</h1>
@@ -58,7 +63,13 @@ const Home = () => {
                         <br/>
                         Following <img src={spotifyLogo} alt="img" style={{ width: "12%", marginInline: "8px", }}></img> Guidelines...
                         <br></br>
-                        This app allows a user to log into their Spotify account to see statistics about the songs that they listen to. I developed a Spring-Boot back-end that uses RESTful endpoints with the Spotify Web API.  I also developed the React front-end that consumes REST API from the Spring-Boot endpoints using Axios.  I created React components that compute additional insight into the Spotify song statistics, and I designed React pages and components to display the Spotify information with the help of Bootstrap and Chart.js. 
+                        This app allows users to log into their Spotify account to see statistics about the songs that they listen to. 
+                        <ul>
+                            <li>React front-end that consumes REST API from the back-end endpoints using Axios.</li>
+                            <li>React components that compute additional insight into the Spotify song statistics.</li>
+                            <li>Chart.js and Bootstrap to design React pages and components to display Spotify information.</li>
+                            <li>Spring-Boot back-end that uses RESTful endpoints with the Spotify Web API.</li>
+                        </ul>
                         </h3>
                     <div className="website-info">
                             <img src={pieChartPic} alt="img"  style={{width: "50%",}}></img>
@@ -71,7 +82,16 @@ const Home = () => {
                         <br></br>
                         <a className="resume-link" href="https://github.com/ucsb-cs156-w22/team04-w22-5pm-courses" target="_blank" rel="noopener noreferrer">Course-Search Web App: </a>
                         <br></br>
-                        Team-based project for CS156: Advanced Applications Programming.  Simulated an Agile Environment with extensive GitHub work.  I developed back-end API endpoints to establish CRUD operations with MongoDB to store the users' course schedule data.  I helped create the API endpoint used to query for all courses at UC Santa Barbara.  The back-end was done in with Spring-Boot with Pitest and JUnit testing.  In the front-end, I created React components that consumes the RESTful API endpoints to the back-end to create pages for listing and creating student schedules.  Front-End testing was done with Jest and mutation testing with Stryker.  Class Grade: A+. (WINTER 2022)
+                        Team-based project for CS156: Advanced Applications Programming.  Allows students to search through the University of California, Santa Barbara's courses and course history, and to login with a student email to create a student schedule.
+                        <ul>
+                            <li>Spring-Boot Java back-end with Pitest and Junit testing.</li>
+                            <li>Developed back-end API endpoints with SwaggerIO to establish CRUD operations with MongoDB to store user course schedule data.</li>
+                            <li>Established API endpoints to query for courses at UC Santa Barbara.</li>
+                            <li>Developed React components that consume the back-end RESTful API endpoints in order to design pages for listing and creating student schedules.</li>
+                            <li>React front-end testing with Jest and mutation testing with Stryker.</li>
+                            <li>Simulated Agile Envrionment with GitHub.</li>
+                            <li>Class Grade: A+ (WINTER 2022)</li>
+                        </ul>
                         </h3>
 
                     <div className="website-info">
@@ -123,14 +143,16 @@ const Home = () => {
 
                     <h2 className="home-h2">RESEARCH: UCSB EARLY SCHOLARS RESEARCH PROGRAM</h2>
                     <h3 className="home-h3">
-                        "Quantifying Gerrymandering by using the Recombination Markov Chain and Score Function" with Professor Eric Vigoda and Andy Wu - I worked with Andy to research and help design a Markov Chain, redistricting algorithm that uses a probabilistic distribution function to generate a more dependable distribution of redistricting plans.  A large set of redistricting plans is generated on this distribution to be compared with real districting plans to observe for state gerrymandering.  We made an official <a href="http://drive.google.com/file/d/1s79BnT6d1pmmeE_gUNsveg5YHcDD9fzX/view?usp=sharing">Project-Proposal</a>
-                        and wrote <a href="https://petalite-spectrum-f97.notion.site/ERSP-Research-Log-Nicolas-Johnson-71088bacd272474ab7cd8245e15b1513">Logs</a> to record our progress (FALL 2021)
+                        "Quantifying Gerrymandering by using the Recombination Markov Chain and Score Function" with Professor Eric Vigoda and Andy Wu - I worked with Andy to research and ensure a more dependable generation of redistricting plans by designing a Markov Chain,
+                        redistricting algorithm that integrates a probabilistic distribution function.  A large set of redistricting plans is generated on this distribution to be compared with real districting plans to observe for state gerrymandering.  We made an official <a href="http://drive.google.com/file/d/1s79BnT6d1pmmeE_gUNsveg5YHcDD9fzX/view?usp=sharing">Project-Proposal</a> and wrote <a href="https://petalite-spectrum-f97.notion.site/ERSP-Research-Log-Nicolas-Johnson-71088bacd272474ab7cd8245e15b1513">Logs</a> to record our progress (FALL 2021).
                     </h3>
+                    <div className="website-info">
+                        <img src={Researchimg} alt="img" style={{ width: "50%", }}></img>
 
-                    <div id="resume-transcript-wrapper">
-                        <a href="https://docs.google.com/document/d/1cUicBOngbToI9g36Gz7WWIG-DDgBw7YzMI2D8H38MVE/edit?usp=sharing" target="_blank" className="resume-btn" rel="noopener noreferrer">RESUME</a>
-                        <a href="https://drive.google.com/file/d/1tzby_180c9RCnKy7f8fYw91SmHvqX_an/view?usp=sharing" target="_blank" className="resume-btn" rel="noopener noreferrer">TRANSCRIPT</a>
                     </div>
+
+                   
+
 
 
 
@@ -144,7 +166,7 @@ const Home = () => {
                                 <h1 id="react-info-title">React.js</h1>
                             </div>
 
-                            <h2 className="website-info-text">Front-End pages and components created using React and Bootstrap.  Axios used to consume REST API from the backend.</h2>
+                            <h2 className="website-info-text">Front-End pages and components created using React and Bootstrap.  Axios used to consume REST API from the back-end.</h2>
                         </div>
                         <div className="website-info-box">
                             <div id="spring-info-title">
