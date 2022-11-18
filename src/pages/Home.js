@@ -38,7 +38,7 @@ const Home = () => {
                         <div className="personal-card-img"></div>
                         <div className="personal-card-info">
                             <h1>Hello, I am Nicolas Johnson.</h1>
-                            <h2>I am a University of California, Santa Barbara undergraduate for the class of 2023, and I am studying Computer Science with a 3.92 GPA.  My goal is to become a Software Developer and a Full-Stack Engineer.  </h2>
+                            <h2>I am a University of California, Santa Barbara undergraduate, and I am studying Computer Science with a 3.9 GPA.  My goal is to become a Software Developer and a Full-Stack Engineer.  </h2>
                         </div>
                     </div>
                     <div id="resume-transcript-wrapper">
@@ -50,7 +50,7 @@ const Home = () => {
                     <h1 className="home-h1" id="home-resume">RESUME</h1>
                     <h2 className="home-h2">COURSEWORK:</h2>
                     <h3 className="home-h3">
-                        <b>GPA: 3.92</b>
+                        <b>GPA: 3.9</b>
                         <br />
                         Advanced Applications Programming, Advanced Object Oriented Design C++, Operating Systems,  Computer Communication Networks, Advanced Data Structures and Algorithms, Automata and Formal Languages, Intro to Computational Science, Computer Architecture,  Intro to Computer Vision, Linear Algebra, Probability and Statistics, Differential Equations
                     </h3>
@@ -61,7 +61,7 @@ const Home = () => {
                         <br />
                         <a className="resume-link" href="/utune">UTune: Spotify Analysis App</a> 
                         <br/>
-                        Following <img src={spotifyLogo} alt="img" style={{ width: "12%", marginInline: "8px", }}></img> Guidelines...
+                        Following <img src={spotifyLogo} alt="img" style={{ width: "12%", marginInline: "8px", }}></img> Guidelines, check it out <a href="/utune">HERE!</a>
                         <br></br>
                         This app allows users to log into their Spotify account to see statistics about the songs that they listen to. 
                         <ul>
