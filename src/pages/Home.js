@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../styles/App.css';
 import logo from '../styles/logo.svg';
 import AppNavbar from '../components/AppNavbar';
@@ -15,6 +15,50 @@ import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 
 const Home = () => {
 
+    useEffect(() => {
+        const reveal = event => {
+            var reveals = document.querySelectorAll(".reveal");
+            var i = 0;
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 0;
+                if (elementTop < windowHeight + elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+                if(elementTop <= -400){
+                    reveals[i].classList.remove("active");
+                }
+            }
+
+            var imgReveals = document.querySelectorAll(".portfolio-img");
+
+            for (var i = 0; i < imgReveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = imgReveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    imgReveals[i].classList.add("active");
+                } else {
+                    imgReveals[i].classList.remove("active");
+                }
+            }
+        };
+
+        window.addEventListener('scroll', reveal);
+
+        return () => {
+            window.removeEventListener('scroll', reveal);
+        };
+        
+    }, []);
+
+   
+   
+
 
 
     return (
@@ -30,57 +74,65 @@ const Home = () => {
             </div>
             <div className="app-body-container">
 
-                <div className="App-body">
+                <div className="App-body" id="home-resume">
 
+                    
+                        <div className="personal-card reveal"  >
 
-                    <div className="personal-card">
-
-                        <div className="personal-card-img"></div>
-                        <div className="personal-card-info">
-                            <h1>Hello, I am Nicolas Johnson.</h1>
-                            <h2>I am a University of California, Santa Barbara undergraduate, and I am studying Computer Science with a 3.9 GPA.  My goal is to become a Software Developer and a Full-Stack Engineer.  </h2>
+                            <div className="personal-card-img"></div>
+                            <div className="personal-card-info">
+                                <h1>Hello, I am Nicolas Johnson.</h1>
+                                <h2>I am a University of California, Santa Barbara undergraduate, and I am studying Computer Science with a 3.9 GPA.  My goal is to become a Software Developer and a Full-Stack Engineer.  </h2>
+                            </div>
                         </div>
-                    </div>
-                    <div id="resume-transcript-wrapper">
-                        <a href="https://docs.google.com/document/d/1cUicBOngbToI9g36Gz7WWIG-DDgBw7YzMI2D8H38MVE/edit?usp=sharing" target="_blank" className="resume-btn" rel="noopener noreferrer">RESUME PDF</a>
-                        <a href="https://drive.google.com/file/d/1tzby_180c9RCnKy7f8fYw91SmHvqX_an/view?usp=sharing" target="_blank" className="resume-btn" rel="noopener noreferrer">TRANSCRIPT PDF</a>
-                    </div>
 
 
-                    <h1 className="home-h1" id="home-resume">RESUME</h1>
-                    <h2 className="home-h2">COURSEWORK:</h2>
-                    <h3 className="home-h3">
-                        <b>GPA: 3.9</b>
-                        <br />
-                        Advanced Applications Programming, Advanced Object Oriented Design C++, Operating Systems,  Computer Communication Networks, Advanced Data Structures and Algorithms, Automata and Formal Languages, Intro to Computational Science, Computer Architecture,  Intro to Computer Vision, Linear Algebra, Probability and Statistics, Differential Equations
-                    </h3>
-                    <h2 className="home-h2" id="home-projects">PROJECTS:</h2>
-                    <h3 className="home-h3">
-                        <b>WEB DEVELOPMENT:</b>
-                        <br />
-                        <br />
-                        <a className="resume-link" href="/utune">UTune: Spotify Analysis App</a> 
-                        <br/>
-                        Following <img src={spotifyLogo} alt="img" style={{ width: "12%", marginInline: "8px", }}></img> Guidelines, check it out <a href="/utune">HERE!</a>
-                        <br></br>
-                        This app allows users to log into their Spotify account to see statistics about the songs that they listen to. 
+                        <h2 className="home-h2 reveal">GPA: 3.9</h2>
+                        <h2 className="home-h2 reveal">COURSEWORK:</h2>
+                        <h3 className="home-h3 reveal">
+                            Advanced Applications Programming, Advanced Object Oriented Design C++, Operating Systems,  Computer Communication Networks, Advanced Data Structures and Algorithms, Automata and Formal Languages, Intro to Computational Science, Computer Architecture,  Intro to Computer Vision, Linear Algebra, Probability and Statistics, Differential Equations
+                        </h3>
+                        <div id="resume-transcript-wrapper">
+                            <a href="https://docs.google.com/document/d/1cUicBOngbToI9g36Gz7WWIG-DDgBw7YzMI2D8H38MVE/edit?usp=sharing" target="_blank" className=" btn btn-lg btn-outline-warning" rel="noopener noreferrer">RESUME DOC</a>
+                            <a href="https://drive.google.com/file/d/1tzby_180c9RCnKy7f8fYw91SmHvqX_an/view?usp=sharing" target="_blank" className=" btn btn-lg btn-outline-warning" rel="noopener noreferrer">TRANSCRIPT</a>
+                        </div>
+
+
+                    <h1 className="home-h1" id="home-projects">PROJECTS:</h1>
+                    </div>
+                    <div class="reveal portfolio-bg utune">
+    
+                    </div>
+                <div className="App-body">
+                    <h1 className="home-h1" id="portfolio-title">UTune</h1>
+                    <h2 className="home-h2"><img src={spotifyLogo} alt="img" style={{ width: "12%", marginInline: "8px", }}></img> Analysis App</h2>
+                    <h3 className="home-h3 reveal">
+                       
+                        Log into your Spotify account to see insight into your favorite artists and music.
                         <ul>
                             <li>React front-end that consumes REST API from the back-end endpoints using Axios.</li>
                             <li>React components that compute additional insight into the Spotify song statistics.</li>
                             <li>Chart.js and Bootstrap to design React pages and components to display Spotify information.</li>
                             <li>Spring-Boot back-end that uses RESTful endpoints with the Spotify Web API.</li>
                         </ul>
+                        <a className="resume-link" href="https://github.com/ucsb-cs156-w22/team04-w22-5pm-courses" target="_blank" rel="noopener noreferrer">Try it Out!</a>
                         </h3>
                     <div className="website-info">
-                            <img src={pieChartPic} alt="img"  style={{width: "50%",}}></img>
-                        <img src={barChartPic} alt="img" style={{width: "50%",}}></img>
+                            <img src={pieChartPic} alt="img"  style={{width: "45%",zIndex:"10",}} class="portfolio-img"></img>
+                        <img src={barChartPic} alt="img" style={{ width: "43%", zIndex: "10", }} class="portfolio-img"></img>
       
                     </div>
+                </div>
+                <div style={{height: "400px"}}></div>
+                <div class="reveal portfolio-bg coursesearch">
 
-                    <h3 className="home-h3">
-                        <br></br>
-                        <br></br>
-                        <a className="resume-link" href="https://github.com/ucsb-cs156-w22/team04-w22-5pm-courses" target="_blank" rel="noopener noreferrer">Course-Search Web App: </a>
+                </div>
+                <div className="App-body">
+                    <h1 className="home-h1" id="portfolio-title">University Course Search App</h1>
+                    <h3 className="home-h3 reveal">
+                       
+
+                        {/* <a className="resume-link" href="https://github.com/ucsb-cs156-w22/team04-w22-5pm-courses" target="_blank" rel="noopener noreferrer">Course-Search Web App: </a> */}
                         <br></br>
                         Team-based project for CS156: Advanced Applications Programming.  Allows students to search through the University of California, Santa Barbara's courses and course history, and to login with a student email to create a student schedule.
                         <ul>
@@ -92,13 +144,15 @@ const Home = () => {
                             <li>Simulated Agile Envrionment with GitHub.</li>
                             <li>Class Grade: A+ (WINTER 2022)</li>
                         </ul>
+                        <a className="resume-link" href="https://github.com/ucsb-cs156-w22/team04-w22-5pm-courses" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
                         </h3>
 
                     <div className="website-info">
-                        <img src={courseListPic} alt="img" style={{ width: "50%", }}></img>
+                        <img src={courseListPic} alt="img" style={{ width: "50%", zIndex: "10" }} class="portfolio-img"></img>
        
 
                     </div>
+                    
 
                         <h3 className="home-h3">
                         <br></br>

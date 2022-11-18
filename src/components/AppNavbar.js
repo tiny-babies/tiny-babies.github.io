@@ -32,7 +32,7 @@ const AppNavbar = () => {
                         <li className="nav-item">
                             <a className="nav-link app-nav-item" id="app-nav-spotify" href="/utune">
 
-                                UTune Analysis App </a>
+                                UTune</a>
                         </li>
                     </ul>
 
