@@ -133,7 +133,7 @@ class TopCategories extends React.Component{
         results = this.state.songList.map((song, index) => (
             <div className="artist-list" key={song.id}>
                 <div className="artist-card" key={song.id} onClick={() => window.open(song.external_urls['spotify'])}>
-                    <h1 className="home-h1">{index + 1}</h1>
+                    <h1 className="home-h1 spotify-card-titles">{index + 1}</h1>
                     <span className="artist-img" style={{
                         backgroundImage: "url(" + song.album.images[0].url + ")"
                     }}></span>
@@ -153,7 +153,7 @@ class TopCategories extends React.Component{
 
             <div>
                 
-                <h2 className="home-h2">
+                <h2 className="home-h2 spotify-card-titles">
                     Here are your top songs in... 
                 </h2>
                 <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg example" onChange={this.dropDownChange} value={this.state.category}>
@@ -171,7 +171,7 @@ class TopCategories extends React.Component{
                     {results.length ? (
                         results
                     ) : (
-                        <h1 className="home-h1" style={{
+                            <h1 className="home-h1 spotify-card-titles" style={{
                             height: '100vh'
                         }}>LOADING...</h1>
                     )}

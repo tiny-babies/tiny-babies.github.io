@@ -249,7 +249,10 @@ h2.app-head-text{
 
 
 
-
+.spotify-card-titles{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 
 .home-h1{
   z-index: 10;

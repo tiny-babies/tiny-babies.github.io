@@ -155,7 +155,7 @@ class Metrics extends React.Component{
         results = this.state.topArtists.map((artist, index) => (
             <div className="artist-list" key={artist.id}>
                 <div className="artist-card" key={artist.id} onClick={() => window.open(artist.external_urls['spotify'])}>
-                    <h1 className="home-h1">{index + 1}</h1>
+                    <h1 className="home-h1 spotify-card-titles">{index + 1}</h1>
                     <span className="artist-img" style={{
                         backgroundImage: "url(" + artist.images[0].url + ")"
                     }}></span>
@@ -173,7 +173,7 @@ class Metrics extends React.Component{
                 <div className="app-body-container">
                     <div className="App-body">
                     
-                        <h2 className="home-h2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>UTune: A <img src={spotifyLogo} alt="img" style={{ width: "12%", marginInline: "8px", }}></img> Analysis App</h2>
+                        <h2 className="home-h2 spotify-card-titles" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>UTune: A <img src={spotifyLogo} alt="img" style={{ width: "12%", marginInline: "8px", }}></img> Analysis App</h2>
                         <Button
                             className="submit-button"
                             variant="danger"
@@ -182,18 +182,18 @@ class Metrics extends React.Component{
                             Logout
                         </Button>
 
-                        <h1 className="home-h1">Hello, {this.state.userProfile.display_name}</h1>
-                        <h2 className="home-h2">Here are your Spotify stats...</h2>
+                        <h1 className="home-h1 spotify-card-titles" style={{marginTop: "40px"}}>Hello, {this.state.userProfile.display_name}</h1>
+                        <h2 className="home-h2 spotify-card-titles">Here are your Spotify stats...</h2>
 
                         {!this.state.artistList.length && (
-                            <h1 className="home-h1">Loading...</h1>
+                            <h1 className="home-h1 spotify-card-titles">Loading...</h1>
                         )}
                         {this.state.artistList.length !== 0 && (
                             <div>
-                                <h1 className="home-h1" style={{
+                                <h1 className="home-h1 spotify-card-titles" style={{
                                     margin: '50px'
                                 }}>Your Favorite Genres</h1>
-                                <h3 className="home-h3">According to the top 50 songs you've listened to in the past 6 months.</h3>
+                                <h3 className="home-h3 spotify-card-titles">According to the top 50 songs you've listened to in the past 6 months.</h3>
                                 <PieChart
                                     key={this.state.artistList}
                                     artists={this.state.artistList}
@@ -202,7 +202,7 @@ class Metrics extends React.Component{
 
                         )}
 
-                        <h1 className="home-h1" style={{
+                        <h1 className="home-h1 spotify-card-titles" style={{
                             margin: '50px'
                         }}>Your Top Artists</h1>
                         <ButtonGroup className='mb-5'>
@@ -214,7 +214,7 @@ class Metrics extends React.Component{
                             {results.length ? (
                                 results
                             ) : (
-                                <h1 className="home-h1" style={{
+                                    <h1 className="home-h1 spotify-card-titles" style={{
                                     height: '100vh'
                                 }}>NO RESULTS</h1>
                             )}
@@ -223,14 +223,14 @@ class Metrics extends React.Component{
                            
    
                             {!this.state.topTracksData.length && (
-                                <h1 className="home-h1">Loading...</h1>
+                            <h1 className="home-h1 spotify-card-titles">Loading...</h1>
                             )}
                             {this.state.topTracksData.length !== 0 && (
                                 <div>
-                                    <h1 className="home-h1" style={{
+                                <h1 className="home-h1 spotify-card-titles" style={{
                                     margin: '50px'
                                     }}>Your Type of Songs</h1>
-                                    <h3 className="home-h3">According to the top 50 songs you've listened to in the past 6 months.</h3>
+                                <h3 className="home-h3 spotify-card-titles">According to the top 50 songs you've listened to in the past 6 months.</h3>
                                     
 
                                     <BarChart
